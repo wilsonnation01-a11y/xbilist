@@ -1,0 +1,9 @@
+rules:
+  - keywords: ["price", "cost", "how much"]
+    reply: "Thanks for reaching out 🙌 Please DM us the product name and location, and we will share the latest price."
+
+  - keywords: ["shipping", "deliver", "delivery"]
+    reply: "Yes, we deliver nationwide 🚚 Please send us your city in DM for exact shipping fee and ETA."
+
+  - keywords: ["available", "in stock"]
+    reply: "Great question! ✅ Please tell us the exact variant in DM so we can confirm current stock quickly."
