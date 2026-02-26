@@ -66,6 +66,12 @@
           </p>
         </div>
         <div id="map" role="application" aria-label="Delivery tracking map"></div>
+        <div class="route-visual" aria-label="Delivery route progress">
+          <div class="route-stop route-stop--done">Picked Up</div>
+          <div class="route-stop route-stop--done">Sorting Hub</div>
+          <div class="route-stop route-stop--active" id="route-current-stop">In Transit</div>
+          <div class="route-stop" id="route-next-stop">Delivered</div>
+        </div>
       </section>
 
       <section class="card admin-panel">

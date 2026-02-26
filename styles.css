@@ -154,6 +154,35 @@ textarea {
   border: 1px solid #dbeafe;
 }
 
+.route-visual {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 0.5rem;
+}
+
+.route-stop {
+  text-align: center;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: #fff;
+}
+
+.route-stop--done {
+  color: #0f766e;
+  border-color: #5eead4;
+  background: #f0fdfa;
+}
+
+.route-stop--active {
+  color: #fff;
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
 .admin-grid,
 .support-grid {
   display: grid;
@@ -195,5 +224,9 @@ footer {
 
   .button {
     width: 100%;
+  }
+
+  .route-visual {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
   }
 }

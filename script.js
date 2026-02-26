@@ -27,6 +27,9 @@ const adminForm = document.getElementById('admin-form');
 const supportForm = document.getElementById('support-form');
 const supportResponse = document.getElementById('support-response');
 
+const routeCurrentStop = document.getElementById('route-current-stop');
+const routeNextStop = document.getElementById('route-next-stop');
+
 const map = L.map('map').setView(activeDelivery.coords, 10);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors',
@@ -37,6 +40,8 @@ marker.bindPopup('Package XP-1024 current location').openPopup();
 
 function syncUi() {
   statusText.textContent = activeDelivery.status;
+  routeCurrentStop.textContent = activeDelivery.status;
+  routeNextStop.textContent = activeDelivery.status === 'Delivered' ? 'Completed' : 'Delivered';
   etaText.textContent = activeDelivery.eta;
   hubText.textContent = activeDelivery.hub;
 
