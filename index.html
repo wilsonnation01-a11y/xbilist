@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xpress Logistics Delivery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <h1 class="logo">Xpress Logistics</h1>
+        <a class="nav-button" href="#track">Track Package</a>
+      </nav>
+      <div class="hero-content container">
+        <h2>Fast & Reliable Delivery Service</h2>
+        <p>
+          Ship parcels locally and internationally with real-time updates,
+          transparent pricing, and guaranteed support.
+        </p>
+        <a class="cta" href="#track">Start Tracking</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="features container" aria-label="Service features">
+        <article class="card">
+          <h3>Same-Day Dispatch</h3>
+          <p>Book before noon and we dispatch your package the same day.</p>
+        </article>
+        <article class="card">
+          <h3>Live Status</h3>
+          <p>Get delivery milestones instantly from pickup to doorstep.</p>
+        </article>
+        <article class="card">
+          <h3>Secure Handling</h3>
+          <p>Insured handling and tamper-proof packaging options.</p>
+        </article>
+      </section>
+
+      <section id="track" class="tracker-section container" aria-label="Package tracker">
+        <h2>Track Your Delivery</h2>
+        <form id="tracking-form" class="tracker-form">
+          <label for="trackingId">Tracking ID</label>
+          <div class="input-group">
+            <input
+              id="trackingId"
+              name="trackingId"
+              type="text"
+              placeholder="e.g. SD123456"
+              autocomplete="off"
+              required
+            />
+            <button type="submit">Track</button>
+          </div>
+          <small>Try: SD123456, SD654321, SD111222</small>
+        </form>
+
+        <div id="result" class="result" aria-live="polite"></div>
+
+        <article id="map-panel" class="map-panel" aria-label="Shipment map tracking">
+          <div class="map-header">
+            <h3>Map Tracking</h3>
+            <p id="map-id">Enter a tracking ID to see package movement.</p>
+          </div>
+          <div class="map-canvas">
+            <div id="map-route" class="map-route"></div>
+            <div id="map-marker" class="map-marker" aria-hidden="true"></div>
+            <div id="map-stops" class="map-stops"></div>
+          </div>
+          <ul id="route-list" class="route-list"></ul>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Xpress Logistics. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
