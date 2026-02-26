@@ -1,0 +1,9 @@
+{
+  "name": "xpress-logistics-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Xpress Logistics website with local preview server",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
